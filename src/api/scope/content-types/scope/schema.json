@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scopes",
+  "info": {
+    "singularName": "scope",
+    "pluralName": "scopes",
+    "displayName": "Scope"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50,
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "scope"
+    }
+  }
+}
