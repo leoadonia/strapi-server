@@ -1,0 +1,18 @@
+services:
+  strapi:
+    image: strapi:0.0.1
+    container_name: strapi
+    restart: unless-stopped
+    environment:
+      ENCRYPTION_KEY: pofSQmalAjeNfwzwt/TsND0bAnfuXOrzxR0x9qQQw9s=
+      API_TOKEN_SALT: plato-strapi
+      APP_KEYS: qjQaa9YmNH4UnubQOpxqHR8C+WQAucqeiSWqgwUxZh0=,Wxvgj/ZAeh32/KZleNbD3vptJ6EqCz4R0fJyrne5ekg=,VYqWbuCHf3v0YxO+NOqP1DQ6Kcg8df32H5+mokSr+SA=,CR5Q6V5mtDgXOKDijNOPSj8hcOQQ+QfT1e1LA7ZFbUE=
+      JWT_SECRET: LHMaYgeink0zUZHAU5t2jjGFCi+9Xk008ppDuQP4Aig=
+      ADMIN_JWT_SECRET: OTXU1Srd2boau1iJiqv9PaPeIKsIz1w6i+eldYxRef4=
+      DATABASE_FILENAME: "./db/data.db"
+      PUBLIC_URL: ""
+    volumes:
+      - ./volumes/uploads:/opt/app/public/uploads
+      - ./volumes/db:/opt/app/db
+    ports:
+      - "1337:1337"
