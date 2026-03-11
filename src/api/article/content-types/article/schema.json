@@ -72,7 +72,8 @@
         }
       },
       "components": [
-        "shared.rich-text"
+        "shared.rich-text",
+        "shared.media"
       ]
     },
     "scope": {

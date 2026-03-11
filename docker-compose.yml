@@ -1,6 +1,6 @@
 services:
   strapi:
-    image: strapi:0.0.1
+    image: adonia/strapi:0.0.3
     container_name: strapi
     restart: unless-stopped
     environment:
@@ -11,6 +11,8 @@ services:
       ADMIN_JWT_SECRET: OTXU1Srd2boau1iJiqv9PaPeIKsIz1w6i+eldYxRef4=
       DATABASE_FILENAME: "./db/data.db"
       PUBLIC_URL: ""
+      S3_ACCESS_KEY_ID: ""
+      S3_ACCESS_SECRET: ""
     volumes:
       - ./volumes/uploads:/opt/app/public/uploads
       - ./volumes/db:/opt/app/db
